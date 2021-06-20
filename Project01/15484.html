@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 500px;
+            height: 500px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "5 Ave \u0026 E 29 St", "label": "5 Ave \u0026 E 29 St", "shape": "dot", "size": 10}, {"id": "Broadway \u0026 E 22 St", "label": "Broadway \u0026 E 22 St", "shape": "dot", "size": 10}, {"id": "W 43 St \u0026 10 Ave", "label": "W 43 St \u0026 10 Ave", "shape": "dot", "size": 10}, {"id": "W 39 St \u0026 9 Ave", "label": "W 39 St \u0026 9 Ave", "shape": "dot", "size": 10}, {"id": "W 13 St \u0026 6 Ave", "label": "W 13 St \u0026 6 Ave", "shape": "dot", "size": 10}, {"id": "8 Ave \u0026 W 31 St N", "label": "8 Ave \u0026 W 31 St N", "shape": "dot", "size": 10}, {"id": "Cleveland Pl \u0026 Spring St", "label": "Cleveland Pl \u0026 Spring St", "shape": "dot", "size": 10}, {"id": "Forsyth St \u0026 Broome St", "label": "Forsyth St \u0026 Broome St", "shape": "dot", "size": 10}, {"id": "E 53 St \u0026 Lexington Ave", "label": "E 53 St \u0026 Lexington Ave", "shape": "dot", "size": 10}, {"id": "W 4 St \u0026 7 Ave S", "label": "W 4 St \u0026 7 Ave S", "shape": "dot", "size": 10}, {"id": "DeKalb Ave \u0026 Hudson Ave", "label": "DeKalb Ave \u0026 Hudson Ave", "shape": "dot", "size": 10}, {"id": "Suffolk St \u0026 Stanton St", "label": "Suffolk St \u0026 Stanton St", "shape": "dot", "size": 10}, {"id": "E 10 St \u0026 Avenue A", "label": "E 10 St \u0026 Avenue A", "shape": "dot", "size": 10}, {"id": "Lafayette St \u0026 E 8 St", "label": "Lafayette St \u0026 E 8 St", "shape": "dot", "size": 10}, {"id": "St Marks Pl \u0026 2 Ave", "label": "St Marks Pl \u0026 2 Ave", "shape": "dot", "size": 10}, {"id": "1 Ave \u0026 E 30 St", "label": "1 Ave \u0026 E 30 St", "shape": "dot", "size": 10}, {"id": "W 25 St \u0026 6 Ave", "label": "W 25 St \u0026 6 Ave", "shape": "dot", "size": 10}, {"id": "2 Ave \u0026 E 31 St", "label": "2 Ave \u0026 E 31 St", "shape": "dot", "size": 10}, {"id": "E 17 St \u0026 Broadway", "label": "E 17 St \u0026 Broadway", "shape": "dot", "size": 10}, {"id": "1 Ave \u0026 E 16 St", "label": "1 Ave \u0026 E 16 St", "shape": "dot", "size": 10}, {"id": "Bank St \u0026 Hudson St", "label": "Bank St \u0026 Hudson St", "shape": "dot", "size": 10}, {"id": "Greenwich Ave \u0026 Charles St", "label": "Greenwich Ave \u0026 Charles St", "shape": "dot", "size": 10}, {"id": "E 4 St \u0026 2 Ave", "label": "E 4 St \u0026 2 Ave", "shape": "dot", "size": 10}, {"id": "S 3 St \u0026 Bedford Ave", "label": "S 3 St \u0026 Bedford Ave", "shape": "dot", "size": 10}, {"id": "W 42 St \u0026 8 Ave", "label": "W 42 St \u0026 8 Ave", "shape": "dot", "size": 10}, {"id": "Warren St \u0026 Church St", "label": "Warren St \u0026 Church St", "shape": "dot", "size": 10}, {"id": "W 46 St \u0026 11 Ave", "label": "W 46 St \u0026 11 Ave", "shape": "dot", "size": 10}, {"id": "W 20 St \u0026 8 Ave", "label": "W 20 St \u0026 8 Ave", "shape": "dot", "size": 10}, {"id": "Washington Square E", "label": "Washington Square E", "shape": "dot", "size": 10}, {"id": "Christopher St \u0026 Greenwich St", "label": "Christopher St \u0026 Greenwich St", "shape": "dot", "size": 10}, {"id": "W 56 St \u0026 6 Ave", "label": "W 56 St \u0026 6 Ave", "shape": "dot", "size": 10}, {"id": "6 Ave \u0026 Broome St", "label": "6 Ave \u0026 Broome St", "shape": "dot", "size": 10}, {"id": "Broadway \u0026 E 14 St", "label": "Broadway \u0026 E 14 St", "shape": "dot", "size": 10}, {"id": "E 52 St \u0026 2 Ave", "label": "E 52 St \u0026 2 Ave", "shape": "dot", "size": 10}, {"id": "Lispenard St \u0026 Broadway", "label": "Lispenard St \u0026 Broadway", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "5 Ave \u0026 E 29 St", "to": "Broadway \u0026 E 22 St", "weight": 1}, {"from": "Broadway \u0026 E 22 St", "to": "W 43 St \u0026 10 Ave", "weight": 1}, {"from": "W 43 St \u0026 10 Ave", "to": "W 39 St \u0026 9 Ave", "weight": 1}, {"from": "W 13 St \u0026 6 Ave", "to": "8 Ave \u0026 W 31 St N", "weight": 1}, {"from": "Cleveland Pl \u0026 Spring St", "to": "Forsyth St \u0026 Broome St", "weight": 1}, {"from": "E 53 St \u0026 Lexington Ave", "to": "W 43 St \u0026 10 Ave", "weight": 1}, {"from": "W 4 St \u0026 7 Ave S", "to": "DeKalb Ave \u0026 Hudson Ave", "weight": 1}, {"from": "Suffolk St \u0026 Stanton St", "to": "E 10 St \u0026 Avenue A", "weight": 1}, {"from": "E 10 St \u0026 Avenue A", "to": "Lafayette St \u0026 E 8 St", "weight": 1}, {"from": "Lafayette St \u0026 E 8 St", "to": "St Marks Pl \u0026 2 Ave", "weight": 1}, {"from": "1 Ave \u0026 E 30 St", "to": "W 25 St \u0026 6 Ave", "weight": 1}, {"from": "W 25 St \u0026 6 Ave", "to": "2 Ave \u0026 E 31 St", "weight": 1}, {"from": "2 Ave \u0026 E 31 St", "to": "E 17 St \u0026 Broadway", "weight": 1}, {"from": "2 Ave \u0026 E 31 St", "to": "1 Ave \u0026 E 16 St", "weight": 1}, {"from": "2 Ave \u0026 E 31 St", "to": "Bank St \u0026 Hudson St", "weight": 1}, {"from": "1 Ave \u0026 E 16 St", "to": "Greenwich Ave \u0026 Charles St", "weight": 1}, {"from": "Greenwich Ave \u0026 Charles St", "to": "E 4 St \u0026 2 Ave", "weight": 1}, {"from": "S 3 St \u0026 Bedford Ave", "to": "W 42 St \u0026 8 Ave", "weight": 1}, {"from": "Warren St \u0026 Church St", "to": "W 46 St \u0026 11 Ave", "weight": 1}, {"from": "W 46 St \u0026 11 Ave", "to": "W 20 St \u0026 8 Ave", "weight": 1}, {"from": "Washington Square E", "to": "Christopher St \u0026 Greenwich St", "weight": 1}, {"from": "W 56 St \u0026 6 Ave", "to": "6 Ave \u0026 Broome St", "weight": 1}, {"from": "Broadway \u0026 E 14 St", "to": "E 52 St \u0026 2 Ave", "weight": 1}, {"from": "E 52 St \u0026 2 Ave", "to": "Lispenard St \u0026 Broadway", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
