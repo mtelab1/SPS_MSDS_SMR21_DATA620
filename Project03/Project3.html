@@ -13191,7 +13191,7 @@ you'd expect?</p>
 <span class="k">def</span> <span class="nf">eval</span><span class="p">():</span>
     <span class="p">{</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">nltk</span><span class="o">.</span><span class="n">classify</span><span class="o">.</span><span class="n">accuracy</span><span class="p">(</span><span class="n">classifier</span><span class="p">,</span> <span class="n">dev_set</span><span class="p">)),</span>
-    <span class="n">classifier</span><span class="o">.</span><span class="n">show_most_informative_features</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>           
+    <span class="n">classifier</span><span class="o">.</span><span class="n">show_most_informative_features</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>           
     <span class="p">}</span>
 <span class="nb">eval</span><span class="p">()</span>
 </pre></div>
@@ -13217,6 +13217,11 @@ Most Informative Features
              last_letter = &#39;f&#39;              male : female =     26.6 : 1.0
              last_letter = &#39;v&#39;              male : female =     15.3 : 1.0
              last_letter = &#39;p&#39;              male : female =     11.9 : 1.0
+             last_letter = &#39;d&#39;              male : female =      9.0 : 1.0
+             last_letter = &#39;o&#39;              male : female =      8.4 : 1.0
+             last_letter = &#39;z&#39;              male : female =      7.8 : 1.0
+             last_letter = &#39;m&#39;              male : female =      7.6 : 1.0
+             last_letter = &#39;r&#39;              male : female =      6.5 : 1.0
 </pre>
 </div>
 </div>
@@ -13323,6 +13328,11 @@ Most Informative Features
              last_letter = &#39;k&#39;              male : female =     45.1 : 1.0
           last_2_letters = &#39;us&#39;             male : female =     39.6 : 1.0
           last_2_letters = &#39;ia&#39;           female : male   =     38.2 : 1.0
+             last_letter = &#39;a&#39;            female : male   =     34.4 : 1.0
+          last_2_letters = &#39;sa&#39;           female : male   =     34.2 : 1.0
+          last_2_letters = &#39;rd&#39;             male : female =     30.2 : 1.0
+          last_3_letters = &#39;ard&#39;            male : female =     27.7 : 1.0
+             last_letter = &#39;f&#39;              male : female =     26.6 : 1.0
 </pre>
 </div>
 </div>
@@ -13399,8 +13409,8 @@ Most Informative Features
           last_3_letters = &#39;ert&#39;            male : female =     10.9 : 1.0
           last_3_letters = &#39;vin&#39;            male : female =     10.9 : 1.0
           last_2_letters = &#39;ip&#39;             male : female =     10.5 : 1.0
-          last_2_letters = &#39;rn&#39;             male : female =     10.5 : 1.0
           last_2_letters = &#39;ns&#39;             male : female =     10.5 : 1.0
+          last_2_letters = &#39;rn&#39;             male : female =     10.5 : 1.0
          first_3_letters = &#39;dor&#39;          female : male   =     10.1 : 1.0
           last_3_letters = &#39;dor&#39;            male : female =      9.9 : 1.0
           last_3_letters = &#39;tha&#39;          female : male   =      9.6 : 1.0
@@ -13420,8 +13430,8 @@ Most Informative Features
              last_letter = &#39;o&#39;              male : female =      8.4 : 1.0
           last_3_letters = &#39;bel&#39;          female : male   =      8.4 : 1.0
          first_2_letters = &#39;fo&#39;             male : female =      8.3 : 1.0
-          last_2_letters = &#39;st&#39;             male : female =      8.3 : 1.0
           last_2_letters = &#39;im&#39;             male : female =      8.3 : 1.0
+          last_2_letters = &#39;st&#39;             male : female =      8.3 : 1.0
           last_2_letters = &#39;as&#39;             male : female =      8.0 : 1.0
          first_3_letters = &#39;mal&#39;          female : male   =      7.9 : 1.0
          first_2_letters = &#39;ka&#39;           female : male   =      7.8 : 1.0
@@ -13446,17 +13456,17 @@ Most Informative Features
           last_3_letters = &#39;ter&#39;            male : female =      6.9 : 1.0
           last_2_letters = &#39;ro&#39;             male : female =      6.9 : 1.0
           last_3_letters = &#39;lee&#39;          female : male   =      6.9 : 1.0
-         first_3_letters = &#39;par&#39;            male : female =      6.8 : 1.0
-         first_3_letters = &#39;bur&#39;            male : female =      6.8 : 1.0
          first_3_letters = &#39;nev&#39;            male : female =      6.8 : 1.0
-         first_3_letters = &#39;mik&#39;            male : female =      6.8 : 1.0
-         first_3_letters = &#39;kin&#39;            male : female =      6.8 : 1.0
-         first_3_letters = &#39;nea&#39;            male : female =      6.8 : 1.0
          first_3_letters = &#39;sau&#39;            male : female =      6.8 : 1.0
+         first_3_letters = &#39;bur&#39;            male : female =      6.8 : 1.0
          first_3_letters = &#39;dom&#39;            male : female =      6.8 : 1.0
+         first_3_letters = &#39;nea&#39;            male : female =      6.8 : 1.0
+         first_3_letters = &#39;kin&#39;            male : female =      6.8 : 1.0
+         first_3_letters = &#39;mik&#39;            male : female =      6.8 : 1.0
+         first_3_letters = &#39;par&#39;            male : female =      6.8 : 1.0
           last_3_letters = &#39;lon&#39;            male : female =      6.7 : 1.0
-          last_3_letters = &#39;per&#39;            male : female =      6.7 : 1.0
           last_3_letters = &#39;ven&#39;            male : female =      6.7 : 1.0
+          last_3_letters = &#39;per&#39;            male : female =      6.7 : 1.0
           last_2_letters = &#39;te&#39;           female : male   =      6.7 : 1.0
          first_3_letters = &#39;kar&#39;          female : male   =      6.6 : 1.0
           last_2_letters = &#39;ni&#39;           female : male   =      6.6 : 1.0
@@ -13465,8 +13475,8 @@ Most Informative Features
              last_letter = &#39;r&#39;              male : female =      6.5 : 1.0
          first_3_letters = &#39;wal&#39;            male : female =      6.4 : 1.0
          first_3_letters = &#39;her&#39;            male : female =      6.4 : 1.0
-          last_2_letters = &#39;ew&#39;             male : female =      6.3 : 1.0
           last_2_letters = &#39;ig&#39;             male : female =      6.3 : 1.0
+          last_2_letters = &#39;ew&#39;             male : female =      6.3 : 1.0
          first_3_letters = &#39;lor&#39;          female : male   =      6.3 : 1.0
           last_2_letters = &#39;ee&#39;           female : male   =      6.3 : 1.0
           last_3_letters = &#39;ssy&#39;          female : male   =      6.2 : 1.0
@@ -13477,27 +13487,27 @@ Most Informative Features
           last_2_letters = &#39;di&#39;           female : male   =      5.9 : 1.0
           last_2_letters = &#39;ed&#39;             male : female =      5.9 : 1.0
           last_3_letters = &#39;sie&#39;          female : male   =      5.8 : 1.0
-          last_3_letters = &#39;sta&#39;          female : male   =      5.8 : 1.0
           last_3_letters = &#39;ree&#39;          female : male   =      5.8 : 1.0
-         first_3_letters = &#39;jan&#39;          female : male   =      5.8 : 1.0
+          last_3_letters = &#39;sta&#39;          female : male   =      5.8 : 1.0
          first_3_letters = &#39;gen&#39;          female : male   =      5.8 : 1.0
+         first_3_letters = &#39;jan&#39;          female : male   =      5.8 : 1.0
          first_3_letters = &#39;flo&#39;          female : male   =      5.8 : 1.0
          first_3_letters = &#39;hay&#39;            male : female =      5.7 : 1.0
          first_3_letters = &#39;whi&#39;            male : female =      5.7 : 1.0
+          last_3_letters = &#39;and&#39;            male : female =      5.7 : 1.0
+          last_3_letters = &#39;nan&#39;            male : female =      5.7 : 1.0
           last_3_letters = &#39;lem&#39;            male : female =      5.7 : 1.0
           last_3_letters = &#39;iff&#39;            male : female =      5.7 : 1.0
-          last_3_letters = &#39;nan&#39;            male : female =      5.7 : 1.0
-          last_3_letters = &#39;and&#39;            male : female =      5.7 : 1.0
           last_2_letters = &#39;ud&#39;             male : female =      5.7 : 1.0
-          last_3_letters = &#39;ddy&#39;            male : female =      5.6 : 1.0
-          last_3_letters = &#39;iah&#39;            male : female =      5.6 : 1.0
           last_3_letters = &#39;ron&#39;            male : female =      5.6 : 1.0
+          last_3_letters = &#39;iah&#39;            male : female =      5.6 : 1.0
+          last_3_letters = &#39;ddy&#39;            male : female =      5.6 : 1.0
           last_2_letters = &#39;sh&#39;             male : female =      5.5 : 1.0
          first_2_letters = &#39;ce&#39;           female : male   =      5.4 : 1.0
          first_3_letters = &#39;ric&#39;            male : female =      5.4 : 1.0
           last_3_letters = &#39;ika&#39;          female : male   =      5.4 : 1.0
-          last_3_letters = &#39;dee&#39;          female : male   =      5.4 : 1.0
           last_3_letters = &#39;ndi&#39;          female : male   =      5.4 : 1.0
+          last_3_letters = &#39;dee&#39;          female : male   =      5.4 : 1.0
           last_3_letters = &#39;ryn&#39;          female : male   =      5.4 : 1.0
          first_3_letters = &#39;ama&#39;          female : male   =      5.3 : 1.0
          first_3_letters = &#39;ken&#39;            male : female =      5.3 : 1.0
@@ -13508,48 +13518,48 @@ Most Informative Features
           last_3_letters = &#39;lyn&#39;          female : male   =      5.1 : 1.0
          first_2_letters = &#39;we&#39;             male : female =      5.0 : 1.0
           last_2_letters = &#39;oy&#39;             male : female =      5.0 : 1.0
-          last_2_letters = &#39;ai&#39;             male : female =      5.0 : 1.0
           last_2_letters = &#39;ke&#39;             male : female =      5.0 : 1.0
+          last_2_letters = &#39;ai&#39;             male : female =      5.0 : 1.0
           last_3_letters = &#39;nah&#39;          female : male   =      4.9 : 1.0
           last_3_letters = &#39;tti&#39;          female : male   =      4.9 : 1.0
-         first_3_letters = &#39;kor&#39;          female : male   =      4.9 : 1.0
          first_3_letters = &#39;myr&#39;          female : male   =      4.9 : 1.0
+         first_3_letters = &#39;kor&#39;          female : male   =      4.9 : 1.0
          first_3_letters = &#39;hel&#39;          female : male   =      4.9 : 1.0
-          last_3_letters = &#39;ise&#39;          female : male   =      4.8 : 1.0
           last_3_letters = &#39;sha&#39;          female : male   =      4.8 : 1.0
+          last_3_letters = &#39;ise&#39;          female : male   =      4.8 : 1.0
          first_2_letters = &#39;fa&#39;           female : male   =      4.7 : 1.0
             first_letter = &#39;w&#39;              male : female =      4.7 : 1.0
-         first_3_letters = &#39;fle&#39;            male : female =      4.7 : 1.0
-         first_3_letters = &#39;say&#39;            male : female =      4.7 : 1.0
-         first_3_letters = &#39;rey&#39;            male : female =      4.7 : 1.0
          first_3_letters = &#39;sco&#39;            male : female =      4.7 : 1.0
+         first_3_letters = &#39;say&#39;            male : female =      4.7 : 1.0
+         first_3_letters = &#39;fle&#39;            male : female =      4.7 : 1.0
+         first_3_letters = &#39;rey&#39;            male : female =      4.7 : 1.0
          first_3_letters = &#39;teo&#39;            male : female =      4.7 : 1.0
           last_3_letters = &#39;ann&#39;          female : male   =      4.7 : 1.0
-          last_3_letters = &#39;hon&#39;            male : female =      4.7 : 1.0
-          last_3_letters = &#39;ome&#39;            male : female =      4.7 : 1.0
-          last_3_letters = &#39;sel&#39;            male : female =      4.7 : 1.0
-          last_3_letters = &#39;uel&#39;            male : female =      4.7 : 1.0
-          last_3_letters = &#39;den&#39;            male : female =      4.7 : 1.0
-          last_3_letters = &#39;ake&#39;            male : female =      4.7 : 1.0
-          last_3_letters = &#39;ott&#39;            male : female =      4.7 : 1.0
-          last_3_letters = &#39;ros&#39;            male : female =      4.7 : 1.0
-          last_3_letters = &#39;ber&#39;            male : female =      4.7 : 1.0
           last_3_letters = &#39;von&#39;            male : female =      4.7 : 1.0
+          last_3_letters = &#39;sel&#39;            male : female =      4.7 : 1.0
+          last_3_letters = &#39;ome&#39;            male : female =      4.7 : 1.0
+          last_3_letters = &#39;uel&#39;            male : female =      4.7 : 1.0
+          last_3_letters = &#39;ake&#39;            male : female =      4.7 : 1.0
+          last_3_letters = &#39;ros&#39;            male : female =      4.7 : 1.0
+          last_3_letters = &#39;hon&#39;            male : female =      4.7 : 1.0
+          last_3_letters = &#39;ber&#39;            male : female =      4.7 : 1.0
+          last_3_letters = &#39;den&#39;            male : female =      4.7 : 1.0
+          last_3_letters = &#39;ott&#39;            male : female =      4.7 : 1.0
           last_3_letters = &#39;lah&#39;          female : male   =      4.5 : 1.0
-         first_3_letters = &#39;bel&#39;          female : male   =      4.5 : 1.0
          first_3_letters = &#39;est&#39;          female : male   =      4.5 : 1.0
+         first_3_letters = &#39;bel&#39;          female : male   =      4.5 : 1.0
          first_2_letters = &#39;go&#39;             male : female =      4.4 : 1.0
-         first_3_letters = &#39;tho&#39;            male : female =      4.3 : 1.0
          first_3_letters = &#39;qui&#39;            male : female =      4.3 : 1.0
+         first_3_letters = &#39;tho&#39;            male : female =      4.3 : 1.0
           last_2_letters = &#39;nt&#39;             male : female =      4.3 : 1.0
-          last_3_letters = &#39;ale&#39;            male : female =      4.3 : 1.0
           last_3_letters = &#39;ain&#39;            male : female =      4.3 : 1.0
+          last_3_letters = &#39;ale&#39;            male : female =      4.3 : 1.0
           last_3_letters = &#39;her&#39;            male : female =      4.3 : 1.0
              last_letter = &#39;s&#39;              male : female =      4.3 : 1.0
              last_letter = &#39;g&#39;              male : female =      4.3 : 1.0
          first_2_letters = &#39;ze&#39;             male : female =      4.3 : 1.0
-          last_3_letters = &#39;mon&#39;            male : female =      4.2 : 1.0
           last_3_letters = &#39;han&#39;            male : female =      4.2 : 1.0
+          last_3_letters = &#39;mon&#39;            male : female =      4.2 : 1.0
           last_2_letters = &#39;or&#39;             male : female =      4.2 : 1.0
           last_2_letters = &#39;si&#39;           female : male   =      4.2 : 1.0
           last_2_letters = &#39;nd&#39;             male : female =      4.1 : 1.0
@@ -13561,16 +13571,16 @@ Most Informative Features
           last_3_letters = &#39;ira&#39;          female : male   =      4.1 : 1.0
           last_3_letters = &#39;hea&#39;          female : male   =      4.1 : 1.0
          first_3_letters = &#39;for&#39;            male : female =      4.1 : 1.0
-         first_3_letters = &#39;sib&#39;          female : male   =      4.1 : 1.0
          first_3_letters = &#39;shi&#39;          female : male   =      4.1 : 1.0
+         first_3_letters = &#39;sib&#39;          female : male   =      4.1 : 1.0
           last_3_letters = &#39;las&#39;            male : female =      4.0 : 1.0
           last_2_letters = &#39;ir&#39;             male : female =      4.0 : 1.0
          first_3_letters = &#39;bar&#39;            male : female =      4.0 : 1.0
           last_2_letters = &#39;ye&#39;           female : male   =      4.0 : 1.0
              last_letter = &#39;j&#39;              male : female =      4.0 : 1.0
          first_2_letters = &#39;ia&#39;             male : female =      3.9 : 1.0
-          last_2_letters = &#39;ex&#39;             male : female =      3.9 : 1.0
           last_2_letters = &#39;nk&#39;             male : female =      3.9 : 1.0
+          last_2_letters = &#39;ex&#39;             male : female =      3.9 : 1.0
              last_letter = &#39;t&#39;              male : female =      3.8 : 1.0
           last_2_letters = &#39;ko&#39;           female : male   =      3.8 : 1.0
           last_3_letters = &#39;mar&#39;            male : female =      3.8 : 1.0
@@ -13579,33 +13589,33 @@ Most Informative Features
              last_letter = &#39;b&#39;              male : female =      3.7 : 1.0
           last_2_letters = &#39;sy&#39;           female : male   =      3.7 : 1.0
          first_3_letters = &#39;noa&#39;            male : female =      3.6 : 1.0
-         first_3_letters = &#39;mos&#39;            male : female =      3.6 : 1.0
          first_3_letters = &#39;ral&#39;            male : female =      3.6 : 1.0
          first_3_letters = &#39;tre&#39;            male : female =      3.6 : 1.0
+         first_3_letters = &#39;lam&#39;            male : female =      3.6 : 1.0
          first_3_letters = &#39;moi&#39;            male : female =      3.6 : 1.0
          first_3_letters = &#39;rem&#39;            male : female =      3.6 : 1.0
-         first_3_letters = &#39;lam&#39;            male : female =      3.6 : 1.0
+         first_3_letters = &#39;mos&#39;            male : female =      3.6 : 1.0
           last_3_letters = &#39;rly&#39;          female : male   =      3.6 : 1.0
           last_3_letters = &#39;ule&#39;            male : female =      3.6 : 1.0
+          last_3_letters = &#39;itt&#39;            male : female =      3.6 : 1.0
           last_3_letters = &#39;hen&#39;            male : female =      3.6 : 1.0
           last_3_letters = &#39;kel&#39;            male : female =      3.6 : 1.0
           last_3_letters = &#39;aud&#39;            male : female =      3.6 : 1.0
-          last_3_letters = &#39;itt&#39;            male : female =      3.6 : 1.0
-          last_3_letters = &#39;gus&#39;            male : female =      3.6 : 1.0
-          last_3_letters = &#39;iot&#39;            male : female =      3.6 : 1.0
-          last_3_letters = &#39;nky&#39;            male : female =      3.6 : 1.0
           last_3_letters = &#39;jay&#39;            male : female =      3.6 : 1.0
-          last_3_letters = &#39;nse&#39;            male : female =      3.6 : 1.0
-          last_3_letters = &#39;ank&#39;            male : female =      3.6 : 1.0
           last_3_letters = &#39;meo&#39;            male : female =      3.6 : 1.0
-          last_3_letters = &#39;lby&#39;            male : female =      3.6 : 1.0
-          last_3_letters = &#39;rne&#39;            male : female =      3.6 : 1.0
+          last_3_letters = &#39;ank&#39;            male : female =      3.6 : 1.0
+          last_3_letters = &#39;nse&#39;            male : female =      3.6 : 1.0
           last_3_letters = &#39;oke&#39;            male : female =      3.6 : 1.0
-         first_3_letters = &#39;edi&#39;          female : male   =      3.6 : 1.0
-         first_3_letters = &#39;bob&#39;          female : male   =      3.6 : 1.0
+          last_3_letters = &#39;nky&#39;            male : female =      3.6 : 1.0
+          last_3_letters = &#39;iot&#39;            male : female =      3.6 : 1.0
+          last_3_letters = &#39;rne&#39;            male : female =      3.6 : 1.0
+          last_3_letters = &#39;gus&#39;            male : female =      3.6 : 1.0
+          last_3_letters = &#39;lby&#39;            male : female =      3.6 : 1.0
          first_3_letters = &#39;kir&#39;          female : male   =      3.6 : 1.0
-         first_3_letters = &#39;mai&#39;          female : male   =      3.6 : 1.0
+         first_3_letters = &#39;bob&#39;          female : male   =      3.6 : 1.0
          first_3_letters = &#39;kal&#39;          female : male   =      3.6 : 1.0
+         first_3_letters = &#39;mai&#39;          female : male   =      3.6 : 1.0
+         first_3_letters = &#39;edi&#39;          female : male   =      3.6 : 1.0
          first_2_letters = &#39;li&#39;           female : male   =      3.6 : 1.0
          first_3_letters = &#39;lyn&#39;          female : male   =      3.6 : 1.0
          first_2_letters = &#39;gl&#39;           female : male   =      3.5 : 1.0
@@ -13614,12 +13624,12 @@ Most Informative Features
          first_2_letters = &#39;za&#39;             male : female =      3.5 : 1.0
          first_3_letters = &#39;sim&#39;            male : female =      3.4 : 1.0
          first_3_letters = &#39;gio&#39;            male : female =      3.4 : 1.0
-          last_3_letters = &#39;key&#39;            male : female =      3.4 : 1.0
-          last_3_letters = &#39;vis&#39;            male : female =      3.4 : 1.0
-          last_3_letters = &#39;inn&#39;            male : female =      3.4 : 1.0
           last_3_letters = &#39;tan&#39;            male : female =      3.4 : 1.0
+          last_3_letters = &#39;vis&#39;            male : female =      3.4 : 1.0
           last_3_letters = &#39;rge&#39;            male : female =      3.4 : 1.0
           last_3_letters = &#39;ger&#39;            male : female =      3.4 : 1.0
+          last_3_letters = &#39;key&#39;            male : female =      3.4 : 1.0
+          last_3_letters = &#39;inn&#39;            male : female =      3.4 : 1.0
           last_2_letters = &#39;za&#39;           female : male   =      3.4 : 1.0
           last_3_letters = &#39;ynn&#39;          female : male   =      3.4 : 1.0
           last_3_letters = &#39;nce&#39;            male : female =      3.4 : 1.0
@@ -13635,15 +13645,15 @@ Most Informative Features
           last_3_letters = &#39;dis&#39;          female : male   =      3.2 : 1.0
           last_3_letters = &#39;sse&#39;          female : male   =      3.2 : 1.0
          first_3_letters = &#39;bri&#39;          female : male   =      3.2 : 1.0
-         first_3_letters = &#39;ore&#39;          female : male   =      3.2 : 1.0
-         first_3_letters = &#39;nel&#39;          female : male   =      3.2 : 1.0
+         first_3_letters = &#39;ode&#39;          female : male   =      3.2 : 1.0
          first_3_letters = &#39;lee&#39;          female : male   =      3.2 : 1.0
          first_3_letters = &#39;kas&#39;          female : male   =      3.2 : 1.0
-         first_3_letters = &#39;far&#39;          female : male   =      3.2 : 1.0
-         first_3_letters = &#39;tru&#39;          female : male   =      3.2 : 1.0
-         first_3_letters = &#39;ode&#39;          female : male   =      3.2 : 1.0
          first_3_letters = &#39;eth&#39;          female : male   =      3.2 : 1.0
          first_3_letters = &#39;eva&#39;          female : male   =      3.2 : 1.0
+         first_3_letters = &#39;nel&#39;          female : male   =      3.2 : 1.0
+         first_3_letters = &#39;far&#39;          female : male   =      3.2 : 1.0
+         first_3_letters = &#39;tru&#39;          female : male   =      3.2 : 1.0
+         first_3_letters = &#39;ore&#39;          female : male   =      3.2 : 1.0
           last_3_letters = &#39;lie&#39;          female : male   =      3.2 : 1.0
          first_3_letters = &#39;car&#39;          female : male   =      3.2 : 1.0
          first_2_letters = &#39;sc&#39;             male : female =      3.1 : 1.0
@@ -13656,50 +13666,50 @@ Most Informative Features
           last_2_letters = &#39;ba&#39;           female : male   =      3.0 : 1.0
          first_2_letters = &#39;my&#39;           female : male   =      3.0 : 1.0
          first_2_letters = &#39;es&#39;           female : male   =      3.0 : 1.0
-          last_3_letters = &#39;ari&#39;          female : male   =      3.0 : 1.0
           last_3_letters = &#39;ile&#39;          female : male   =      3.0 : 1.0
+          last_3_letters = &#39;ari&#39;          female : male   =      3.0 : 1.0
          first_3_letters = &#39;reg&#39;            male : female =      2.9 : 1.0
          first_3_letters = &#39;dev&#39;          female : male   =      2.9 : 1.0
          first_3_letters = &#39;cri&#39;          female : male   =      2.9 : 1.0
          first_3_letters = &#39;mag&#39;          female : male   =      2.9 : 1.0
-          last_3_letters = &#39;ery&#39;            male : female =      2.9 : 1.0
+          last_3_letters = &#39;ien&#39;            male : female =      2.9 : 1.0
           last_3_letters = &#39;ond&#39;            male : female =      2.9 : 1.0
           last_3_letters = &#39;yle&#39;            male : female =      2.9 : 1.0
-          last_3_letters = &#39;ien&#39;            male : female =      2.9 : 1.0
           last_3_letters = &#39;dan&#39;            male : female =      2.9 : 1.0
+          last_3_letters = &#39;ery&#39;            male : female =      2.9 : 1.0
          first_2_letters = &#39;na&#39;           female : male   =      2.9 : 1.0
-         first_3_letters = &#39;ser&#39;            male : female =      2.8 : 1.0
          first_3_letters = &#39;ram&#39;            male : female =      2.8 : 1.0
          first_3_letters = &#39;gav&#39;            male : female =      2.8 : 1.0
-         first_3_letters = &#39;alb&#39;            male : female =      2.8 : 1.0
+         first_3_letters = &#39;ser&#39;            male : female =      2.8 : 1.0
          first_3_letters = &#39;fri&#39;            male : female =      2.8 : 1.0
-          last_3_letters = &#39;rby&#39;            male : female =      2.8 : 1.0
+         first_3_letters = &#39;alb&#39;            male : female =      2.8 : 1.0
           last_3_letters = &#39;are&#39;            male : female =      2.8 : 1.0
           last_3_letters = &#39;nte&#39;            male : female =      2.8 : 1.0
+          last_3_letters = &#39;rby&#39;            male : female =      2.8 : 1.0
           last_3_letters = &#39;bbi&#39;          female : male   =      2.8 : 1.0
           last_3_letters = &#39;eri&#39;          female : male   =      2.8 : 1.0
          first_2_letters = &#39;aj&#39;             male : female =      2.8 : 1.0
-          last_2_letters = &#39;bo&#39;             male : female =      2.8 : 1.0
-          last_2_letters = &#39;pp&#39;             male : female =      2.8 : 1.0
-          last_2_letters = &#39;so&#39;             male : female =      2.8 : 1.0
-          last_2_letters = &#39;we&#39;             male : female =      2.8 : 1.0
-          last_2_letters = &#39;ok&#39;             male : female =      2.8 : 1.0
           last_2_letters = &#39;ou&#39;             male : female =      2.8 : 1.0
-         first_3_letters = &#39;ely&#39;          female : male   =      2.8 : 1.0
+          last_2_letters = &#39;bo&#39;             male : female =      2.8 : 1.0
+          last_2_letters = &#39;we&#39;             male : female =      2.8 : 1.0
+          last_2_letters = &#39;so&#39;             male : female =      2.8 : 1.0
+          last_2_letters = &#39;ok&#39;             male : female =      2.8 : 1.0
+          last_2_letters = &#39;pp&#39;             male : female =      2.8 : 1.0
          first_3_letters = &#39;til&#39;          female : male   =      2.8 : 1.0
          first_3_letters = &#39;cec&#39;          female : male   =      2.8 : 1.0
-         first_3_letters = &#39;kai&#39;          female : male   =      2.8 : 1.0
-         first_3_letters = &#39;lia&#39;          female : male   =      2.8 : 1.0
          first_3_letters = &#39;ara&#39;          female : male   =      2.8 : 1.0
          first_3_letters = &#39;ame&#39;          female : male   =      2.8 : 1.0
+         first_3_letters = &#39;ely&#39;          female : male   =      2.8 : 1.0
+         first_3_letters = &#39;kai&#39;          female : male   =      2.8 : 1.0
+         first_3_letters = &#39;lia&#39;          female : male   =      2.8 : 1.0
          first_2_letters = &#39;et&#39;           female : male   =      2.8 : 1.0
          first_3_letters = &#39;wil&#39;            male : female =      2.7 : 1.0
          first_3_letters = &#39;jer&#39;            male : female =      2.7 : 1.0
          first_2_letters = &#39;ha&#39;             male : female =      2.7 : 1.0
             first_letter = &#39;q&#39;              male : female =      2.7 : 1.0
           last_2_letters = &#39;me&#39;             male : female =      2.7 : 1.0
-         first_3_letters = &#39;sar&#39;          female : male   =      2.7 : 1.0
          first_3_letters = &#39;kim&#39;          female : male   =      2.7 : 1.0
+         first_3_letters = &#39;sar&#39;          female : male   =      2.7 : 1.0
           last_3_letters = &#39;eth&#39;          female : male   =      2.7 : 1.0
          first_2_letters = &#39;qu&#39;             male : female =      2.7 : 1.0
          first_2_letters = &#39;ag&#39;           female : male   =      2.7 : 1.0
@@ -13707,66 +13717,66 @@ Most Informative Features
          first_2_letters = &#39;me&#39;           female : male   =      2.6 : 1.0
          first_2_letters = &#39;wi&#39;             male : female =      2.6 : 1.0
           last_2_letters = &#39;in&#39;             male : female =      2.6 : 1.0
-         first_3_letters = &#39;ola&#39;            male : female =      2.6 : 1.0
          first_3_letters = &#39;rup&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;pac&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;fin&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;ori&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;aja&#39;            male : female =      2.6 : 1.0
          first_3_letters = &#39;had&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;mat&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;thi&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;sul&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;fab&#39;            male : female =      2.6 : 1.0
          first_3_letters = &#39;die&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;elm&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;rav&#39;            male : female =      2.6 : 1.0
          first_3_letters = &#39;fer&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;max&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;rav&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;elm&#39;            male : female =      2.6 : 1.0
          first_3_letters = &#39;sig&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;zol&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;ole&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;thi&#39;            male : female =      2.6 : 1.0
          first_3_letters = &#39;tob&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;alp&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;sul&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;fin&#39;            male : female =      2.6 : 1.0
          first_3_letters = &#39;joh&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;max&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;zol&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;pac&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;alp&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;mat&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;aja&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;fab&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;ori&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;ole&#39;            male : female =      2.6 : 1.0
          first_3_letters = &#39;kev&#39;            male : female =      2.6 : 1.0
-         first_3_letters = &#39;iza&#39;            male : female =      2.6 : 1.0
          first_3_letters = &#39;gir&#39;            male : female =      2.6 : 1.0
-         first_2_letters = &#39;ye&#39;           female : male   =      2.6 : 1.0
+         first_3_letters = &#39;ola&#39;            male : female =      2.6 : 1.0
+         first_3_letters = &#39;iza&#39;            male : female =      2.6 : 1.0
          first_2_letters = &#39;ky&#39;           female : male   =      2.6 : 1.0
-          last_3_letters = &#39;lix&#39;            male : female =      2.6 : 1.0
+         first_2_letters = &#39;ye&#39;           female : male   =      2.6 : 1.0
+          last_3_letters = &#39;kip&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;tes&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;fin&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;elo&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;ael&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;sly&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;she&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;rdy&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;ern&#39;            male : female =      2.6 : 1.0
           last_3_letters = &#39;ady&#39;            male : female =      2.6 : 1.0
           last_3_letters = &#39;ens&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;rio&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;res&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;och&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;che&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;mel&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;ass&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;elo&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;gil&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;eas&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;ipp&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;lex&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;red&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;ern&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;tes&#39;            male : female =      2.6 : 1.0
           last_3_letters = &#39;ook&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;zzy&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;lou&#39;            male : female =      2.6 : 1.0
           last_3_letters = &#39;uce&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;ird&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;rdy&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;had&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;sly&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;fin&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;ass&#39;            male : female =      2.6 : 1.0
           last_3_letters = &#39;vor&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;zzy&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;had&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;lix&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;eas&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;red&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;che&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;gil&#39;            male : female =      2.6 : 1.0
           last_3_letters = &#39;cal&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;ael&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;kip&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;och&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;ird&#39;            male : female =      2.6 : 1.0
           last_3_letters = &#39;dal&#39;            male : female =      2.6 : 1.0
-          last_3_letters = &#39;she&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;lex&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;lou&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;rio&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;ipp&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;mel&#39;            male : female =      2.6 : 1.0
           last_3_letters = &#39;gel&#39;            male : female =      2.6 : 1.0
+          last_3_letters = &#39;res&#39;            male : female =      2.6 : 1.0
          first_2_letters = &#39;ur&#39;             male : female =      2.6 : 1.0
             first_letter = &#39;u&#39;              male : female =      2.6 : 1.0
           last_3_letters = &#39;rey&#39;            male : female =      2.5 : 1.0
@@ -13777,39 +13787,39 @@ Most Informative Features
          first_2_letters = &#39;lo&#39;           female : male   =      2.5 : 1.0
          first_3_letters = &#39;ado&#39;            male : female =      2.5 : 1.0
          first_3_letters = &#39;hor&#39;            male : female =      2.5 : 1.0
-          last_3_letters = &#39;ier&#39;            male : female =      2.4 : 1.0
-          last_3_letters = &#39;air&#39;            male : female =      2.4 : 1.0
           last_3_letters = &#39;ail&#39;            male : female =      2.4 : 1.0
+          last_3_letters = &#39;air&#39;            male : female =      2.4 : 1.0
           last_3_letters = &#39;igh&#39;            male : female =      2.4 : 1.0
+          last_3_letters = &#39;ier&#39;            male : female =      2.4 : 1.0
          first_2_letters = &#39;su&#39;           female : male   =      2.4 : 1.0
-         first_3_letters = &#39;sel&#39;          female : male   =      2.4 : 1.0
          first_3_letters = &#39;van&#39;          female : male   =      2.4 : 1.0
-         first_3_letters = &#39;ker&#39;          female : male   =      2.4 : 1.0
          first_3_letters = &#39;tri&#39;          female : male   =      2.4 : 1.0
+         first_3_letters = &#39;ker&#39;          female : male   =      2.4 : 1.0
+         first_3_letters = &#39;sel&#39;          female : male   =      2.4 : 1.0
          first_3_letters = &#39;tor&#39;            male : female =      2.4 : 1.0
          first_2_letters = &#39;to&#39;             male : female =      2.4 : 1.0
           last_2_letters = &#39;oe&#39;             male : female =      2.4 : 1.0
           last_3_letters = &#39;ace&#39;            male : female =      2.4 : 1.0
             first_letter = &#39;k&#39;            female : male   =      2.4 : 1.0
-         first_3_letters = &#39;mor&#39;            male : female =      2.4 : 1.0
          first_3_letters = &#39;sal&#39;            male : female =      2.4 : 1.0
+         first_3_letters = &#39;mor&#39;            male : female =      2.4 : 1.0
          first_2_letters = &#39;hi&#39;             male : female =      2.4 : 1.0
          first_2_letters = &#39;ga&#39;             male : female =      2.4 : 1.0
-          last_3_letters = &#39;dre&#39;          female : male   =      2.4 : 1.0
-          last_3_letters = &#39;ide&#39;          female : male   =      2.4 : 1.0
-          last_3_letters = &#39;ely&#39;          female : male   =      2.4 : 1.0
-          last_3_letters = &#39;nee&#39;          female : male   =      2.4 : 1.0
-          last_3_letters = &#39;rea&#39;          female : male   =      2.4 : 1.0
           last_3_letters = &#39;xie&#39;          female : male   =      2.4 : 1.0
-         first_3_letters = &#39;mis&#39;          female : male   =      2.3 : 1.0
+          last_3_letters = &#39;nee&#39;          female : male   =      2.4 : 1.0
+          last_3_letters = &#39;dre&#39;          female : male   =      2.4 : 1.0
+          last_3_letters = &#39;ely&#39;          female : male   =      2.4 : 1.0
+          last_3_letters = &#39;ide&#39;          female : male   =      2.4 : 1.0
+          last_3_letters = &#39;rea&#39;          female : male   =      2.4 : 1.0
          first_3_letters = &#39;lot&#39;          female : male   =      2.3 : 1.0
-         first_3_letters = &#39;job&#39;          female : male   =      2.3 : 1.0
          first_3_letters = &#39;urs&#39;          female : male   =      2.3 : 1.0
+         first_3_letters = &#39;job&#39;          female : male   =      2.3 : 1.0
          first_3_letters = &#39;mea&#39;          female : male   =      2.3 : 1.0
+         first_3_letters = &#39;mis&#39;          female : male   =      2.3 : 1.0
          first_2_letters = &#39;dr&#39;             male : female =      2.3 : 1.0
          first_2_letters = &#39;iz&#39;             male : female =      2.3 : 1.0
-          last_2_letters = &#39;ab&#39;             male : female =      2.3 : 1.0
           last_2_letters = &#39;ur&#39;             male : female =      2.3 : 1.0
+          last_2_letters = &#39;ab&#39;             male : female =      2.3 : 1.0
           last_2_letters = &#39;eg&#39;             male : female =      2.3 : 1.0
          first_3_letters = &#39;ben&#39;            male : female =      2.3 : 1.0
          first_2_letters = &#39;ul&#39;             male : female =      2.3 : 1.0
@@ -13823,23 +13833,23 @@ Most Informative Features
           last_2_letters = &#39;ll&#39;             male : female =      2.2 : 1.0
          first_2_letters = &#39;bl&#39;           female : male   =      2.2 : 1.0
          first_2_letters = &#39;am&#39;           female : male   =      2.2 : 1.0
-         first_3_letters = &#39;mit&#39;            male : female =      2.2 : 1.0
-         first_3_letters = &#39;gun&#39;            male : female =      2.2 : 1.0
          first_3_letters = &#39;elw&#39;            male : female =      2.2 : 1.0
-         first_3_letters = &#39;mah&#39;            male : female =      2.2 : 1.0
-         first_3_letters = &#39;rom&#39;            male : female =      2.2 : 1.0
          first_3_letters = &#39;pep&#39;            male : female =      2.2 : 1.0
+         first_3_letters = &#39;gun&#39;            male : female =      2.2 : 1.0
+         first_3_letters = &#39;mit&#39;            male : female =      2.2 : 1.0
+         first_3_letters = &#39;rom&#39;            male : female =      2.2 : 1.0
+         first_3_letters = &#39;mah&#39;            male : female =      2.2 : 1.0
          first_2_letters = &#39;pi&#39;             male : female =      2.2 : 1.0
           last_2_letters = &#39;de&#39;           female : male   =      2.2 : 1.0
           last_3_letters = &#39;ent&#39;            male : female =      2.2 : 1.0
-          last_3_letters = &#39;bin&#39;            male : female =      2.2 : 1.0
           last_3_letters = &#39;eil&#39;            male : female =      2.2 : 1.0
           last_3_letters = &#39;hal&#39;            male : female =      2.2 : 1.0
-          last_3_letters = &#39;ate&#39;            male : female =      2.2 : 1.0
-          last_3_letters = &#39;ray&#39;            male : female =      2.2 : 1.0
           last_3_letters = &#39;rny&#39;            male : female =      2.2 : 1.0
-         first_3_letters = &#39;pau&#39;          female : male   =      2.2 : 1.0
+          last_3_letters = &#39;ray&#39;            male : female =      2.2 : 1.0
+          last_3_letters = &#39;ate&#39;            male : female =      2.2 : 1.0
+          last_3_letters = &#39;bin&#39;            male : female =      2.2 : 1.0
          first_3_letters = &#39;gin&#39;          female : male   =      2.2 : 1.0
+         first_3_letters = &#39;pau&#39;          female : male   =      2.2 : 1.0
          first_3_letters = &#39;lau&#39;          female : male   =      2.2 : 1.0
          first_3_letters = &#39;mer&#39;          female : male   =      2.1 : 1.0
          first_2_letters = &#39;du&#39;             male : female =      2.1 : 1.0
@@ -13862,16 +13872,16 @@ Most Informative Features
           last_3_letters = &#39;ley&#39;            male : female =      2.0 : 1.0
          first_3_letters = &#39;sha&#39;          female : male   =      2.0 : 1.0
          first_3_letters = &#39;sta&#39;            male : female =      2.0 : 1.0
-         first_3_letters = &#39;pie&#39;            male : female =      2.0 : 1.0
          first_3_letters = &#39;gri&#39;            male : female =      2.0 : 1.0
-         first_3_letters = &#39;ave&#39;            male : female =      2.0 : 1.0
          first_3_letters = &#39;sid&#39;            male : female =      2.0 : 1.0
+         first_3_letters = &#39;pie&#39;            male : female =      2.0 : 1.0
          first_3_letters = &#39;fil&#39;            male : female =      2.0 : 1.0
          first_3_letters = &#39;rei&#39;            male : female =      2.0 : 1.0
+         first_3_letters = &#39;ave&#39;            male : female =      2.0 : 1.0
          first_2_letters = &#39;ki&#39;           female : male   =      2.0 : 1.0
+          last_3_letters = &#39;hel&#39;            male : female =      2.0 : 1.0
           last_3_letters = &#39;que&#39;            male : female =      2.0 : 1.0
           last_3_letters = &#39;rty&#39;            male : female =      2.0 : 1.0
-          last_3_letters = &#39;hel&#39;            male : female =      2.0 : 1.0
          first_2_letters = &#39;ab&#39;             male : female =      2.0 : 1.0
           last_2_letters = &#39;ky&#39;             male : female =      2.0 : 1.0
          first_2_letters = &#39;ve&#39;           female : male   =      2.0 : 1.0
@@ -13879,43 +13889,43 @@ Most Informative Features
           last_3_letters = &#39;ill&#39;            male : female =      2.0 : 1.0
          first_2_letters = &#39;ja&#39;           female : male   =      2.0 : 1.0
          first_2_letters = &#39;ri&#39;             male : female =      2.0 : 1.0
-          last_3_letters = &#39;rit&#39;          female : male   =      1.9 : 1.0
-          last_3_letters = &#39;iss&#39;          female : male   =      1.9 : 1.0
-          last_3_letters = &#39;odi&#39;          female : male   =      1.9 : 1.0
-          last_3_letters = &#39;rid&#39;          female : male   =      1.9 : 1.0
-          last_3_letters = &#39;ind&#39;          female : male   =      1.9 : 1.0
-          last_3_letters = &#39;oni&#39;          female : male   =      1.9 : 1.0
           last_3_letters = &#39;udi&#39;          female : male   =      1.9 : 1.0
+          last_3_letters = &#39;rid&#39;          female : male   =      1.9 : 1.0
+          last_3_letters = &#39;odi&#39;          female : male   =      1.9 : 1.0
+          last_3_letters = &#39;rit&#39;          female : male   =      1.9 : 1.0
+          last_3_letters = &#39;ind&#39;          female : male   =      1.9 : 1.0
           last_3_letters = &#39;yce&#39;          female : male   =      1.9 : 1.0
           last_3_letters = &#39;acy&#39;          female : male   =      1.9 : 1.0
-          last_3_letters = &#39;ese&#39;          female : male   =      1.9 : 1.0
-          last_3_letters = &#39;ean&#39;          female : male   =      1.9 : 1.0
+          last_3_letters = &#39;iss&#39;          female : male   =      1.9 : 1.0
+          last_3_letters = &#39;oni&#39;          female : male   =      1.9 : 1.0
           last_3_letters = &#39;net&#39;          female : male   =      1.9 : 1.0
+          last_3_letters = &#39;ean&#39;          female : male   =      1.9 : 1.0
           last_3_letters = &#39;tty&#39;          female : male   =      1.9 : 1.0
+          last_3_letters = &#39;ese&#39;          female : male   =      1.9 : 1.0
           last_2_letters = &#39;hy&#39;             male : female =      1.9 : 1.0
-         first_3_letters = &#39;gle&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;joe&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;wan&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;pea&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;eme&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;gly&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;ner&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;esm&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;lar&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;kam&#39;          female : male   =      1.9 : 1.0
          first_3_letters = &#39;chi&#39;          female : male   =      1.9 : 1.0
          first_3_letters = &#39;zor&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;eme&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;gui&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;bec&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;joe&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;que&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;wan&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;lel&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;lar&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;esm&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;ner&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;ver&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;kit&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;tat&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;gly&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;rut&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;kam&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;kyl&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;pea&#39;          female : male   =      1.9 : 1.0
-         first_3_letters = &#39;kip&#39;          female : male   =      1.9 : 1.0
          first_3_letters = &#39;aga&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;lel&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;gle&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;kip&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;rut&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;tat&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;kyl&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;bec&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;kit&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;gui&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;ver&#39;          female : male   =      1.9 : 1.0
+         first_3_letters = &#39;que&#39;          female : male   =      1.9 : 1.0
          first_2_letters = &#39;st&#39;             male : female =      1.9 : 1.0
           last_2_letters = &#39;ay&#39;             male : female =      1.9 : 1.0
          first_2_letters = &#39;au&#39;           female : male   =      1.9 : 1.0
@@ -13936,25 +13946,25 @@ Most Informative Features
             first_letter = &#39;z&#39;              male : female =      1.8 : 1.0
           last_3_letters = &#39;sey&#39;          female : male   =      1.8 : 1.0
           last_3_letters = &#39;nie&#39;          female : male   =      1.8 : 1.0
-         first_3_letters = &#39;sam&#39;            male : female =      1.8 : 1.0
-         first_3_letters = &#39;sil&#39;            male : female =      1.8 : 1.0
          first_3_letters = &#39;tom&#39;            male : female =      1.8 : 1.0
+         first_3_letters = &#39;sil&#39;            male : female =      1.8 : 1.0
+         first_3_letters = &#39;sam&#39;            male : female =      1.8 : 1.0
          first_3_letters = &#39;jud&#39;            male : female =      1.8 : 1.0
           last_2_letters = &#39;rg&#39;           female : male   =      1.8 : 1.0
-         first_2_letters = &#39;zi&#39;           female : male   =      1.8 : 1.0
          first_2_letters = &#39;ap&#39;           female : male   =      1.8 : 1.0
+         first_2_letters = &#39;zi&#39;           female : male   =      1.8 : 1.0
                    has_U = True             male : female =      1.8 : 1.0
           last_3_letters = &#39;ryl&#39;          female : male   =      1.8 : 1.0
-         first_3_letters = &#39;ana&#39;          female : male   =      1.8 : 1.0
-         first_3_letters = &#39;ang&#39;          female : male   =      1.8 : 1.0
          first_3_letters = &#39;kri&#39;          female : male   =      1.8 : 1.0
+         first_3_letters = &#39;ang&#39;          female : male   =      1.8 : 1.0
+         first_3_letters = &#39;ana&#39;          female : male   =      1.8 : 1.0
          first_3_letters = &#39;har&#39;            male : female =      1.8 : 1.0
          first_2_letters = &#39;el&#39;           female : male   =      1.8 : 1.0
              last_letter = &#39;l&#39;              male : female =      1.8 : 1.0
           last_2_letters = &#39;by&#39;             male : female =      1.8 : 1.0
          first_3_letters = &#39;dan&#39;          female : male   =      1.8 : 1.0
-         first_3_letters = &#39;bra&#39;            male : female =      1.8 : 1.0
          first_3_letters = &#39;nor&#39;            male : female =      1.8 : 1.0
+         first_3_letters = &#39;bra&#39;            male : female =      1.8 : 1.0
          first_3_letters = &#39;hen&#39;            male : female =      1.8 : 1.0
           last_3_letters = &#39;ett&#39;            male : female =      1.8 : 1.0
          first_2_letters = &#39;ra&#39;             male : female =      1.8 : 1.0
@@ -13973,40 +13983,40 @@ Most Informative Features
              last_letter = &#39;x&#39;              male : female =      1.7 : 1.0
          first_3_letters = &#39;jul&#39;          female : male   =      1.7 : 1.0
          first_2_letters = &#39;cr&#39;           female : male   =      1.7 : 1.0
-          last_3_letters = &#39;cha&#39;          female : male   =      1.7 : 1.0
-          last_3_letters = &#39;fer&#39;          female : male   =      1.7 : 1.0
           last_3_letters = &#39;ude&#39;          female : male   =      1.7 : 1.0
           last_3_letters = &#39;ire&#39;          female : male   =      1.7 : 1.0
-         first_2_letters = &#39;en&#39;             male : female =      1.7 : 1.0
-         first_2_letters = &#39;xe&#39;             male : female =      1.7 : 1.0
+          last_3_letters = &#39;fer&#39;          female : male   =      1.7 : 1.0
+          last_3_letters = &#39;cha&#39;          female : male   =      1.7 : 1.0
          first_2_letters = &#39;ik&#39;             male : female =      1.7 : 1.0
-         first_2_letters = &#39;ay&#39;             male : female =      1.7 : 1.0
-         first_2_letters = &#39;xy&#39;             male : female =      1.7 : 1.0
-         first_2_letters = &#39;ib&#39;             male : female =      1.7 : 1.0
-         first_2_letters = &#39;fu&#39;             male : female =      1.7 : 1.0
+         first_2_letters = &#39;xe&#39;             male : female =      1.7 : 1.0
+         first_2_letters = &#39;en&#39;             male : female =      1.7 : 1.0
          first_2_letters = &#39;ot&#39;             male : female =      1.7 : 1.0
-         first_2_letters = &#39;ir&#39;             male : female =      1.7 : 1.0
+         first_2_letters = &#39;xy&#39;             male : female =      1.7 : 1.0
          first_2_letters = &#39;oc&#39;             male : female =      1.7 : 1.0
-         first_2_letters = &#39;um&#39;             male : female =      1.7 : 1.0
+         first_2_letters = &#39;fu&#39;             male : female =      1.7 : 1.0
          first_2_letters = &#39;ho&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;it&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;iz&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;rm&#39;             male : female =      1.7 : 1.0
+         first_2_letters = &#39;um&#39;             male : female =      1.7 : 1.0
+         first_2_letters = &#39;ir&#39;             male : female =      1.7 : 1.0
+         first_2_letters = &#39;ib&#39;             male : female =      1.7 : 1.0
+         first_2_letters = &#39;ay&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;fy&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;vy&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;ag&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;oh&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;au&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;lu&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;rr&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;zy&#39;             male : female =      1.7 : 1.0
           last_2_letters = &#39;ji&#39;             male : female =      1.7 : 1.0
           last_2_letters = &#39;ve&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;um&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;jy&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;ag&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;rr&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;au&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;ol&#39;             male : female =      1.7 : 1.0
           last_2_letters = &#39;ei&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;vy&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;lu&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;oh&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;fy&#39;             male : female =      1.7 : 1.0
-          last_2_letters = &#39;zy&#39;             male : female =      1.7 : 1.0
           last_2_letters = &#39;rl&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;jy&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;iz&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;um&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;it&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;rm&#39;             male : female =      1.7 : 1.0
+          last_2_letters = &#39;ol&#39;             male : female =      1.7 : 1.0
           last_2_letters = &#39;gh&#39;             male : female =      1.7 : 1.0
          first_3_letters = &#39;hol&#39;          female : male   =      1.7 : 1.0
           last_3_letters = &#39;ane&#39;          female : male   =      1.6 : 1.0
@@ -14022,193 +14032,193 @@ Most Informative Features
          first_3_letters = &#39;rob&#39;          female : male   =      1.6 : 1.0
           last_2_letters = &#39;ah&#39;           female : male   =      1.6 : 1.0
          first_2_letters = &#39;se&#39;             male : female =      1.6 : 1.0
-         first_3_letters = &#39;bas&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;ned&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;gal&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;ere&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;rya&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;zan&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;mic&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;win&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;yeh&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;ear&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;coo&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;bo&#39;             male : female =      1.6 : 1.0
-         first_3_letters = &#39;hav&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;pal&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;rag&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;ces&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;rit&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;bin&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;end&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;yve&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;abr&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;emo&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;rea&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;gai&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;cre&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;dew&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;kee&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;lei&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;ort&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;orl&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;era&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;pag&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;ful&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;por&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;edw&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;izz&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;poo&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;jo&#39;             male : female =      1.6 : 1.0
-         first_3_letters = &#39;ott&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;jam&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;mas&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;eus&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;zel&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;bat&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;ans&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;ear&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;ulr&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;oct&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;rya&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;ort&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;abr&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;dov&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;eas&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;yal&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;tea&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;hea&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;end&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;bin&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;ian&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;mei&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;dam&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;gre&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;ted&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;zan&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;bas&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;yeh&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;yal&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;eas&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;pal&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;ces&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;eus&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;rit&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;gal&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;rag&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;jo&#39;             male : female =      1.6 : 1.0
+         first_3_letters = &#39;izz&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;ere&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;poo&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;gai&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;jam&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;bo&#39;             male : female =      1.6 : 1.0
+         first_3_letters = &#39;zel&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;orl&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;cre&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;ned&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;win&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;era&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;mic&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;hea&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;dew&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;pag&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;por&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;kee&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;bat&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;ott&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;yve&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;ans&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;ful&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;tea&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;hav&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;mas&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;ray&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;vin&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;ike&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;syl&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;rik&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;rai&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;dem&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;dam&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;vir&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;lio&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;cos&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;vir&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;bea&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;tra&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;aug&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;ray&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;sin&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;ree&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;syl&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;sea&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;mei&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;oll&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;mur&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;gre&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;rik&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;lui&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;ted&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;jua&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;odi&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;aug&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;bea&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;rai&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;jon&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;vin&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;dem&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;kon&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;avr&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;mur&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;ree&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;oll&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;sin&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;odi&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;sea&#39;            male : female =      1.6 : 1.0
-         first_3_letters = &#39;jua&#39;            male : female =      1.6 : 1.0
+         first_3_letters = &#39;tra&#39;            male : female =      1.6 : 1.0
           last_2_letters = &#39;gi&#39;           female : male   =      1.6 : 1.0
                    has_O = True             male : female =      1.6 : 1.0
-          last_3_letters = &#39;bby&#39;          female : male   =      1.6 : 1.0
           last_3_letters = &#39;hie&#39;          female : male   =      1.6 : 1.0
+          last_3_letters = &#39;bby&#39;          female : male   =      1.6 : 1.0
          first_2_letters = &#39;ea&#39;           female : male   =      1.6 : 1.0
          first_2_letters = &#39;iv&#39;           female : male   =      1.6 : 1.0
-          last_3_letters = &#39;ony&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;rmy&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;aid&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;let&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;kee&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;gen&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;oan&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;hay&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ooh&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;leo&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;rgi&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;erl&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;sam&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;kat&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ose&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;oey&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;rol&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ole&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;nen&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;cil&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;sal&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;wer&#39;            male : female =      1.6 : 1.0
           last_3_letters = &#39;hil&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;kit&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;dge&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;cat&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ted&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ppe&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ade&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;enn&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;arl&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;kim&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;tey&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;bur&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;gia&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;vig&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ust&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;heo&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ncy&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;cam&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;alo&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;hay&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;uth&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;gay&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;obe&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;tim&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;con&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;emy&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;gan&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;lot&#39;            male : female =      1.6 : 1.0
           last_3_letters = &#39;nis&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;orm&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;vyn&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;gia&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ois&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;wig&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;byl&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ooh&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ret&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;wyn&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ted&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;mey&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;zan&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;abi&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;yde&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;tas&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;kat&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;sam&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;aid&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;nat&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;bur&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ear&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;rew&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;bba&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;say&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ynd&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;lad&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;mei&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;oey&#39;            male : female =      1.6 : 1.0
           last_3_letters = &#39;nes&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;jan&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;oan&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;gen&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;uby&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;row&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;kee&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;vig&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;oro&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;din&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;nid&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;jie&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;owe&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ion&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;dah&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;rgi&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;xis&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;tey&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;tye&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;heo&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;cil&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;isy&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;kit&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;nen&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;afa&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ody&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ose&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;enn&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;fan&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;age&#39;            male : female =      1.6 : 1.0
           last_3_letters = &#39;igi&#39;            male : female =      1.6 : 1.0
           last_3_letters = &#39;bo&#39;             male : female =      1.6 : 1.0
-          last_3_letters = &#39;row&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ear&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;obe&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;din&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;rew&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;emy&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;tye&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;tim&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;jie&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;cas&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;gay&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;mey&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ell&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;bba&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;age&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ois&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;xis&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ynd&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;owe&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ust&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;dge&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ole&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;erl&#39;            male : female =      1.6 : 1.0
           last_3_letters = &#39;hna&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ion&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;zan&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ncy&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;dah&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;oro&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;say&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;wyn&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;byl&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;tas&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;mei&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;low&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;vyn&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;lot&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;gan&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;alo&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ony&#39;            male : female =      1.6 : 1.0
           last_3_letters = &#39;arr&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;jan&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;isy&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ody&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;lad&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;wig&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;yde&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;con&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;uth&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;jo&#39;             male : female =      1.6 : 1.0
           last_3_letters = &#39;yre&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;aly&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;wer&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;abi&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;sal&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;uby&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;orm&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ell&#39;            male : female =      1.6 : 1.0
           last_3_letters = &#39;ive&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;nat&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;kim&#39;            male : female =      1.6 : 1.0
           last_3_letters = &#39;cah&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;fan&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;ret&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;cam&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;nid&#39;            male : female =      1.6 : 1.0
-          last_3_letters = &#39;afa&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;aly&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;leo&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;arl&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;low&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;cas&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;let&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;rmy&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;jo&#39;             male : female =      1.6 : 1.0
+          last_3_letters = &#39;ade&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;rol&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;ppe&#39;            male : female =      1.6 : 1.0
+          last_3_letters = &#39;cat&#39;            male : female =      1.6 : 1.0
           last_3_letters = &#39;iel&#39;            male : female =      1.6 : 1.0
          first_3_letters = &#39;pet&#39;          female : male   =      1.6 : 1.0
                    has_A = False            male : female =      1.5 : 1.0
@@ -14218,37 +14228,37 @@ Most Informative Features
          first_2_letters = &#39;pr&#39;             male : female =      1.5 : 1.0
           last_2_letters = &#39;ry&#39;             male : female =      1.5 : 1.0
          first_2_letters = &#39;co&#39;           female : male   =      1.5 : 1.0
-          last_3_letters = &#39;tle&#39;          female : male   =      1.5 : 1.0
-          last_3_letters = &#39;awn&#39;          female : male   =      1.5 : 1.0
-          last_3_letters = &#39;eve&#39;          female : male   =      1.5 : 1.0
           last_3_letters = &#39;iam&#39;          female : male   =      1.5 : 1.0
-          last_3_letters = &#39;ove&#39;          female : male   =      1.5 : 1.0
-          last_3_letters = &#39;min&#39;          female : male   =      1.5 : 1.0
-          last_3_letters = &#39;see&#39;          female : male   =      1.5 : 1.0
-          last_3_letters = &#39;tyn&#39;          female : male   =      1.5 : 1.0
           last_3_letters = &#39;bal&#39;          female : male   =      1.5 : 1.0
+          last_3_letters = &#39;ove&#39;          female : male   =      1.5 : 1.0
+          last_3_letters = &#39;see&#39;          female : male   =      1.5 : 1.0
+          last_3_letters = &#39;eve&#39;          female : male   =      1.5 : 1.0
+          last_3_letters = &#39;min&#39;          female : male   =      1.5 : 1.0
+          last_3_letters = &#39;awn&#39;          female : male   =      1.5 : 1.0
+          last_3_letters = &#39;tle&#39;          female : male   =      1.5 : 1.0
           last_3_letters = &#39;ral&#39;          female : male   =      1.5 : 1.0
+          last_3_letters = &#39;tyn&#39;          female : male   =      1.5 : 1.0
          first_3_letters = &#39;col&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;cod&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;jay&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;row&#39;          female : male   =      1.5 : 1.0
          first_3_letters = &#39;vit&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;din&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;lai&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;alv&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;elb&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;gia&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;kan&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;nei&#39;          female : male   =      1.5 : 1.0
          first_3_letters = &#39;ven&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;muf&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;bon&#39;          female : male   =      1.5 : 1.0
          first_3_letters = &#39;fid&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;pip&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;roa&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;kla&#39;          female : male   =      1.5 : 1.0
-         first_3_letters = &#39;von&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;kan&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;din&#39;          female : male   =      1.5 : 1.0
          first_3_letters = &#39;adi&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;bon&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;kla&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;elb&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;nei&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;row&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;roa&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;jay&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;cod&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;alv&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;lai&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;muf&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;gia&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;pip&#39;          female : male   =      1.5 : 1.0
+         first_3_letters = &#39;von&#39;          female : male   =      1.5 : 1.0
             first_letter = &#39;m&#39;            female : male   =      1.5 : 1.0
           last_2_letters = &#39;ge&#39;             male : female =      1.5 : 1.0
          first_3_letters = &#39;ste&#39;            male : female =      1.5 : 1.0
@@ -14270,20 +14280,20 @@ Most Informative Features
          first_3_letters = &#39;fre&#39;            male : female =      1.4 : 1.0
           last_3_letters = &#39;ite&#39;          female : male   =      1.4 : 1.0
           last_3_letters = &#39;ore&#39;          female : male   =      1.4 : 1.0
-         first_3_letters = &#39;des&#39;          female : male   =      1.4 : 1.0
-         first_3_letters = &#39;pri&#39;          female : male   =      1.4 : 1.0
-         first_3_letters = &#39;dea&#39;          female : male   =      1.4 : 1.0
-         first_3_letters = &#39;nes&#39;          female : male   =      1.4 : 1.0
          first_3_letters = &#39;all&#39;          female : male   =      1.4 : 1.0
-         first_3_letters = &#39;dal&#39;          female : male   =      1.4 : 1.0
+         first_3_letters = &#39;pri&#39;          female : male   =      1.4 : 1.0
+         first_3_letters = &#39;des&#39;          female : male   =      1.4 : 1.0
+         first_3_letters = &#39;dea&#39;          female : male   =      1.4 : 1.0
          first_3_letters = &#39;gay&#39;          female : male   =      1.4 : 1.0
+         first_3_letters = &#39;nes&#39;          female : male   =      1.4 : 1.0
+         first_3_letters = &#39;dal&#39;          female : male   =      1.4 : 1.0
          first_2_letters = &#39;si&#39;             male : female =      1.4 : 1.0
             first_letter = &#39;r&#39;              male : female =      1.4 : 1.0
-          last_2_letters = &#39;ty&#39;           female : male   =      1.4 : 1.0
           last_2_letters = &#39;wn&#39;           female : male   =      1.4 : 1.0
+          last_2_letters = &#39;ty&#39;           female : male   =      1.4 : 1.0
           last_2_letters = &#39;fa&#39;           female : male   =      1.4 : 1.0
-         first_2_letters = &#39;sy&#39;           female : male   =      1.4 : 1.0
          first_2_letters = &#39;im&#39;           female : male   =      1.4 : 1.0
+         first_2_letters = &#39;sy&#39;           female : male   =      1.4 : 1.0
          first_3_letters = &#39;hil&#39;            male : female =      1.4 : 1.0
          first_3_letters = &#39;phi&#39;            male : female =      1.4 : 1.0
           last_3_letters = &#39;gie&#39;            male : female =      1.4 : 1.0
@@ -14296,24 +14306,24 @@ Most Informative Features
           last_3_letters = &#39;ril&#39;          female : male   =      1.4 : 1.0
           last_3_letters = &#39;sty&#39;          female : male   =      1.4 : 1.0
          first_2_letters = &#39;ph&#39;           female : male   =      1.4 : 1.0
-         first_3_letters = &#39;oli&#39;          female : male   =      1.4 : 1.0
          first_3_letters = &#39;son&#39;          female : male   =      1.4 : 1.0
          first_3_letters = &#39;wen&#39;          female : male   =      1.4 : 1.0
-         first_3_letters = &#39;len&#39;          female : male   =      1.4 : 1.0
          first_3_letters = &#39;ala&#39;          female : male   =      1.4 : 1.0
+         first_3_letters = &#39;oli&#39;          female : male   =      1.4 : 1.0
+         first_3_letters = &#39;len&#39;          female : male   =      1.4 : 1.0
          first_2_letters = &#39;je&#39;             male : female =      1.4 : 1.0
                    has_I = True           female : male   =      1.4 : 1.0
          first_2_letters = &#39;po&#39;             male : female =      1.4 : 1.0
-         first_2_letters = &#39;da&#39;           female : male   =      1.4 : 1.0
          first_2_letters = &#39;ti&#39;           female : male   =      1.4 : 1.0
+         first_2_letters = &#39;da&#39;           female : male   =      1.4 : 1.0
          first_2_letters = &#39;bi&#39;           female : male   =      1.4 : 1.0
                    has_A = True           female : male   =      1.4 : 1.0
          first_3_letters = &#39;ant&#39;            male : female =      1.4 : 1.0
           last_3_letters = &#39;fie&#39;            male : female =      1.3 : 1.0
           last_2_letters = &#39;is&#39;             male : female =      1.3 : 1.0
          first_2_letters = &#39;fl&#39;           female : male   =      1.3 : 1.0
-         first_3_letters = &#39;mil&#39;          female : male   =      1.3 : 1.0
          first_3_letters = &#39;jes&#39;          female : male   =      1.3 : 1.0
+         first_3_letters = &#39;mil&#39;          female : male   =      1.3 : 1.0
           last_2_letters = &#39;dy&#39;             male : female =      1.3 : 1.0
          first_3_letters = &#39;nic&#39;            male : female =      1.3 : 1.0
             first_letter = &#39;p&#39;              male : female =      1.3 : 1.0
@@ -14323,8 +14333,8 @@ Most Informative Features
          first_3_letters = &#39;tim&#39;            male : female =      1.3 : 1.0
           last_2_letters = &#39;my&#39;             male : female =      1.3 : 1.0
           last_2_letters = &#39;gy&#39;           female : male   =      1.3 : 1.0
-         first_3_letters = &#39;con&#39;          female : male   =      1.3 : 1.0
          first_3_letters = &#39;che&#39;          female : male   =      1.3 : 1.0
+         first_3_letters = &#39;con&#39;          female : male   =      1.3 : 1.0
           last_3_letters = &#39;cey&#39;            male : female =      1.3 : 1.0
           last_3_letters = &#39;ney&#39;          female : male   =      1.3 : 1.0
           last_2_letters = &#39;ss&#39;             male : female =      1.3 : 1.0
@@ -14363,33 +14373,33 @@ Most Informative Features
          first_3_letters = &#39;gil&#39;          female : male   =      1.2 : 1.0
           last_3_letters = &#39;nny&#39;            male : female =      1.2 : 1.0
             first_letter = &#39;b&#39;              male : female =      1.2 : 1.0
-         first_3_letters = &#39;gab&#39;          female : male   =      1.2 : 1.0
          first_3_letters = &#39;ell&#39;          female : male   =      1.2 : 1.0
          first_3_letters = &#39;emm&#39;          female : male   =      1.2 : 1.0
+         first_3_letters = &#39;gab&#39;          female : male   =      1.2 : 1.0
                    has_s = True             male : female =      1.2 : 1.0
+         first_3_letters = &#39;ada&#39;            male : female =      1.2 : 1.0
+         first_3_letters = &#39;may&#39;            male : female =      1.2 : 1.0
          first_3_letters = &#39;dio&#39;            male : female =      1.2 : 1.0
+         first_3_letters = &#39;tar&#39;            male : female =      1.2 : 1.0
          first_3_letters = &#39;wyn&#39;            male : female =      1.2 : 1.0
          first_3_letters = &#39;jod&#39;            male : female =      1.2 : 1.0
          first_3_letters = &#39;amb&#39;            male : female =      1.2 : 1.0
-         first_3_letters = &#39;ada&#39;            male : female =      1.2 : 1.0
-         first_3_letters = &#39;may&#39;            male : female =      1.2 : 1.0
          first_3_letters = &#39;tal&#39;            male : female =      1.2 : 1.0
-         first_3_letters = &#39;tar&#39;            male : female =      1.2 : 1.0
-          last_3_letters = &#39;del&#39;          female : male   =      1.2 : 1.0
-          last_3_letters = &#39;non&#39;          female : male   =      1.2 : 1.0
           last_3_letters = &#39;die&#39;          female : male   =      1.2 : 1.0
           last_3_letters = &#39;vie&#39;          female : male   =      1.2 : 1.0
+          last_3_letters = &#39;del&#39;          female : male   =      1.2 : 1.0
+          last_3_letters = &#39;non&#39;          female : male   =      1.2 : 1.0
           last_3_letters = &#39;one&#39;            male : female =      1.2 : 1.0
           last_3_letters = &#39;ffy&#39;            male : female =      1.2 : 1.0
          first_3_letters = &#39;den&#39;          female : male   =      1.2 : 1.0
           last_2_letters = &#39;ny&#39;             male : female =      1.2 : 1.0
          first_3_letters = &#39;ing&#39;            male : female =      1.2 : 1.0
           last_3_letters = &#39;thy&#39;          female : male   =      1.2 : 1.0
-         first_2_letters = &#39;kl&#39;             male : female =      1.2 : 1.0
          first_2_letters = &#39;vo&#39;             male : female =      1.2 : 1.0
+         first_2_letters = &#39;kl&#39;             male : female =      1.2 : 1.0
          first_2_letters = &#39;or&#39;             male : female =      1.2 : 1.0
-          last_3_letters = &#39;ary&#39;            male : female =      1.2 : 1.0
           last_3_letters = &#39;cky&#39;            male : female =      1.2 : 1.0
+          last_3_letters = &#39;ary&#39;            male : female =      1.2 : 1.0
          first_3_letters = &#39;les&#39;          female : male   =      1.2 : 1.0
          first_2_letters = &#39;ge&#39;           female : male   =      1.2 : 1.0
                    has_O = False          female : male   =      1.2 : 1.0
@@ -14402,30 +14412,30 @@ Most Informative Features
                    has_l = False            male : female =      1.2 : 1.0
                    has_n = True           female : male   =      1.2 : 1.0
           last_3_letters = &#39;udy&#39;          female : male   =      1.2 : 1.0
-          last_3_letters = &#39;ppy&#39;          female : male   =      1.2 : 1.0
           last_3_letters = &#39;rel&#39;          female : male   =      1.2 : 1.0
-          last_3_letters = &#39;kki&#39;          female : male   =      1.2 : 1.0
           last_3_letters = &#39;ere&#39;          female : male   =      1.2 : 1.0
+          last_3_letters = &#39;kki&#39;          female : male   =      1.2 : 1.0
           last_3_letters = &#39;ggy&#39;          female : male   =      1.2 : 1.0
+          last_3_letters = &#39;ppy&#39;          female : male   =      1.2 : 1.0
          first_2_letters = &#39;ni&#39;             male : female =      1.2 : 1.0
          first_2_letters = &#39;cl&#39;             male : female =      1.2 : 1.0
          first_3_letters = &#39;jea&#39;            male : female =      1.2 : 1.0
-         first_3_letters = &#39;hei&#39;          female : male   =      1.2 : 1.0
-         first_3_letters = &#39;bil&#39;          female : male   =      1.2 : 1.0
-         first_3_letters = &#39;raf&#39;          female : male   =      1.2 : 1.0
-         first_3_letters = &#39;noe&#39;          female : male   =      1.2 : 1.0
          first_3_letters = &#39;zar&#39;          female : male   =      1.2 : 1.0
-         first_3_letters = &#39;lou&#39;          female : male   =      1.2 : 1.0
+         first_3_letters = &#39;hei&#39;          female : male   =      1.2 : 1.0
+         first_3_letters = &#39;oth&#39;          female : male   =      1.2 : 1.0
          first_3_letters = &#39;enr&#39;          female : male   =      1.2 : 1.0
+         first_3_letters = &#39;noe&#39;          female : male   =      1.2 : 1.0
          first_3_letters = &#39;nol&#39;          female : male   =      1.2 : 1.0
          first_3_letters = &#39;ton&#39;          female : male   =      1.2 : 1.0
-         first_3_letters = &#39;oth&#39;          female : male   =      1.2 : 1.0
+         first_3_letters = &#39;raf&#39;          female : male   =      1.2 : 1.0
+         first_3_letters = &#39;lou&#39;          female : male   =      1.2 : 1.0
          first_3_letters = &#39;vic&#39;          female : male   =      1.2 : 1.0
+         first_3_letters = &#39;bil&#39;          female : male   =      1.2 : 1.0
          first_3_letters = &#39;don&#39;          female : male   =      1.2 : 1.0
          first_2_letters = &#39;di&#39;             male : female =      1.2 : 1.0
-         first_3_letters = &#39;eri&#39;            male : female =      1.1 : 1.0
          first_3_letters = &#39;ash&#39;            male : female =      1.1 : 1.0
          first_3_letters = &#39;tab&#39;            male : female =      1.1 : 1.0
+         first_3_letters = &#39;eri&#39;            male : female =      1.1 : 1.0
          first_2_letters = &#39;as&#39;           female : male   =      1.1 : 1.0
                    has_r = False          female : male   =      1.1 : 1.0
          first_2_letters = &#39;bo&#39;             male : female =      1.1 : 1.0
@@ -14440,35 +14450,35 @@ Most Informative Features
             first_letter = &#39;n&#39;            female : male   =      1.1 : 1.0
           last_3_letters = &#39;ris&#39;          female : male   =      1.1 : 1.0
          first_3_letters = &#39;eug&#39;            male : female =      1.1 : 1.0
-         first_3_letters = &#39;syd&#39;            male : female =      1.1 : 1.0
+         first_3_letters = &#39;jos&#39;            male : female =      1.1 : 1.0
          first_3_letters = &#39;man&#39;            male : female =      1.1 : 1.0
          first_3_letters = &#39;sas&#39;            male : female =      1.1 : 1.0
-         first_3_letters = &#39;jos&#39;            male : female =      1.1 : 1.0
-         first_3_letters = &#39;tie&#39;            male : female =      1.1 : 1.0
-         first_3_letters = &#39;jas&#39;            male : female =      1.1 : 1.0
-         first_3_letters = &#39;lay&#39;            male : female =      1.1 : 1.0
-         first_3_letters = &#39;elv&#39;            male : female =      1.1 : 1.0
+         first_3_letters = &#39;syd&#39;            male : female =      1.1 : 1.0
          first_3_letters = &#39;alo&#39;            male : female =      1.1 : 1.0
-         first_3_letters = &#39;bru&#39;            male : female =      1.1 : 1.0
-         first_3_letters = &#39;sho&#39;            male : female =      1.1 : 1.0
          first_3_letters = &#39;jus&#39;            male : female =      1.1 : 1.0
+         first_3_letters = &#39;tie&#39;            male : female =      1.1 : 1.0
          first_3_letters = &#39;edd&#39;            male : female =      1.1 : 1.0
+         first_3_letters = &#39;sho&#39;            male : female =      1.1 : 1.0
+         first_3_letters = &#39;lay&#39;            male : female =      1.1 : 1.0
          first_3_letters = &#39;aus&#39;            male : female =      1.1 : 1.0
+         first_3_letters = &#39;elv&#39;            male : female =      1.1 : 1.0
+         first_3_letters = &#39;jas&#39;            male : female =      1.1 : 1.0
+         first_3_letters = &#39;bru&#39;            male : female =      1.1 : 1.0
          first_2_letters = &#39;hy&#39;           female : male   =      1.1 : 1.0
-          last_3_letters = &#39;rcy&#39;            male : female =      1.1 : 1.0
-          last_3_letters = &#39;ish&#39;            male : female =      1.1 : 1.0
-          last_3_letters = &#39;tel&#39;            male : female =      1.1 : 1.0
-          last_3_letters = &#39;ran&#39;            male : female =      1.1 : 1.0
-          last_3_letters = &#39;ili&#39;            male : female =      1.1 : 1.0
-          last_3_letters = &#39;zie&#39;            male : female =      1.1 : 1.0
           last_3_letters = &#39;ess&#39;            male : female =      1.1 : 1.0
-          last_3_letters = &#39;yan&#39;            male : female =      1.1 : 1.0
+          last_3_letters = &#39;zie&#39;            male : female =      1.1 : 1.0
+          last_3_letters = &#39;ran&#39;            male : female =      1.1 : 1.0
+          last_3_letters = &#39;ish&#39;            male : female =      1.1 : 1.0
           last_3_letters = &#39;rde&#39;            male : female =      1.1 : 1.0
+          last_3_letters = &#39;tel&#39;            male : female =      1.1 : 1.0
+          last_3_letters = &#39;ili&#39;            male : female =      1.1 : 1.0
+          last_3_letters = &#39;yan&#39;            male : female =      1.1 : 1.0
+          last_3_letters = &#39;rcy&#39;            male : female =      1.1 : 1.0
           last_3_letters = &#39;ith&#39;          female : male   =      1.1 : 1.0
                    has_n = False            male : female =      1.1 : 1.0
          first_3_letters = &#39;cla&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;lan&#39;          female : male   =      1.1 : 1.0
          first_3_letters = &#39;cal&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;lan&#39;          female : male   =      1.1 : 1.0
          first_2_letters = &#39;ke&#39;             male : female =      1.1 : 1.0
          first_2_letters = &#39;ol&#39;           female : male   =      1.1 : 1.0
                    has_t = True             male : female =      1.1 : 1.0
@@ -14478,8 +14488,8 @@ Most Informative Features
          first_2_letters = &#39;br&#39;             male : female =      1.1 : 1.0
          first_2_letters = &#39;le&#39;           female : male   =      1.1 : 1.0
          first_3_letters = &#39;pen&#39;            male : female =      1.1 : 1.0
-         first_3_letters = &#39;bry&#39;            male : female =      1.1 : 1.0
          first_3_letters = &#39;bla&#39;            male : female =      1.1 : 1.0
+         first_3_letters = &#39;bry&#39;            male : female =      1.1 : 1.0
          first_3_letters = &#39;rub&#39;            male : female =      1.1 : 1.0
           last_2_letters = &#39;py&#39;           female : male   =      1.1 : 1.0
           last_2_letters = &#39;vi&#39;           female : male   =      1.1 : 1.0
@@ -14487,53 +14497,53 @@ Most Informative Features
          first_2_letters = &#39;ta&#39;             male : female =      1.1 : 1.0
                    has_U = False          female : male   =      1.1 : 1.0
          first_2_letters = &#39;te&#39;             male : female =      1.1 : 1.0
-          last_3_letters = &#39;iet&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;osi&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;ble&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;oly&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;ece&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;uli&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;sun&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;wen&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;aun&#39;          female : male   =      1.1 : 1.0
           last_3_letters = &#39;nel&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;oby&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;tsy&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;pie&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;eau&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;ial&#39;          female : male   =      1.1 : 1.0
           last_3_letters = &#39;aro&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;wen&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;osi&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;aun&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;eau&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;uli&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;ali&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;tsy&#39;          female : male   =      1.1 : 1.0
           last_3_letters = &#39;edy&#39;          female : male   =      1.1 : 1.0
           last_3_letters = &#39;ime&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;oly&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;oby&#39;          female : male   =      1.1 : 1.0
           last_3_letters = &#39;org&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;ial&#39;          female : male   =      1.1 : 1.0
-          last_3_letters = &#39;ali&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;iet&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;ece&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;pie&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;sun&#39;          female : male   =      1.1 : 1.0
+          last_3_letters = &#39;ble&#39;          female : male   =      1.1 : 1.0
             first_letter = &#39;i&#39;            female : male   =      1.1 : 1.0
-         first_3_letters = &#39;bre&#39;            male : female =      1.1 : 1.0
          first_3_letters = &#39;ren&#39;            male : female =      1.1 : 1.0
+         first_3_letters = &#39;bre&#39;            male : female =      1.1 : 1.0
          first_2_letters = &#39;al&#39;             male : female =      1.1 : 1.0
                    has_Y = True           female : male   =      1.1 : 1.0
-         first_3_letters = &#39;cai&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;eln&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;cou&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;joc&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;vil&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;sun&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;avi&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;per&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;sca&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;ivo&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;daw&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;hai&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;ari&#39;          female : male   =      1.1 : 1.0
          first_3_letters = &#39;tyb&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;rah&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;dre&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;fed&#39;          female : male   =      1.1 : 1.0
          first_3_letters = &#39;xen&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;dre&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;vil&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;hai&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;per&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;ivo&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;joc&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;avi&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;rah&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;eln&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;cai&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;fed&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;sun&#39;          female : male   =      1.1 : 1.0
          first_3_letters = &#39;jai&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;ari&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;cou&#39;          female : male   =      1.1 : 1.0
          first_3_letters = &#39;aub&#39;          female : male   =      1.1 : 1.0
-         first_3_letters = &#39;ale&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;daw&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;sca&#39;          female : male   =      1.1 : 1.0
          first_3_letters = &#39;nat&#39;          female : male   =      1.1 : 1.0
+         first_3_letters = &#39;ale&#39;          female : male   =      1.1 : 1.0
          first_3_letters = &#39;cle&#39;            male : female =      1.1 : 1.0
                    has_s = False          female : male   =      1.1 : 1.0
          first_2_letters = &#39;ne&#39;             male : female =      1.1 : 1.0
@@ -14542,8 +14552,8 @@ Most Informative Features
          first_2_letters = &#39;ju&#39;           female : male   =      1.0 : 1.0
           last_3_letters = &#39;lis&#39;          female : male   =      1.0 : 1.0
          first_2_letters = &#39;fe&#39;             male : female =      1.0 : 1.0
-         first_3_letters = &#39;dar&#39;          female : male   =      1.0 : 1.0
          first_3_letters = &#39;chr&#39;          female : male   =      1.0 : 1.0
+         first_3_letters = &#39;dar&#39;          female : male   =      1.0 : 1.0
          first_3_letters = &#39;isa&#39;          female : male   =      1.0 : 1.0
          first_2_letters = &#39;cy&#39;             male : female =      1.0 : 1.0
                    has_t = False          female : male   =      1.0 : 1.0
@@ -14551,27 +14561,27 @@ Most Informative Features
          first_2_letters = &#39;ro&#39;           female : male   =      1.0 : 1.0
           last_2_letters = &#39;re&#39;             male : female =      1.0 : 1.0
          first_2_letters = &#39;va&#39;             male : female =      1.0 : 1.0
-         first_3_letters = &#39;the&#39;            male : female =      1.0 : 1.0
          first_3_letters = &#39;leo&#39;            male : female =      1.0 : 1.0
+         first_3_letters = &#39;the&#39;            male : female =      1.0 : 1.0
          first_2_letters = &#39;so&#39;           female : male   =      1.0 : 1.0
           last_2_letters = &#39;et&#39;             male : female =      1.0 : 1.0
                    has_Y = False            male : female =      1.0 : 1.0
             first_letter = &#39;f&#39;            female : male   =      1.0 : 1.0
+         first_3_letters = &#39;tan&#39;            male : female =      1.0 : 1.0
          first_3_letters = &#39;gus&#39;            male : female =      1.0 : 1.0
          first_3_letters = &#39;ron&#39;            male : female =      1.0 : 1.0
-         first_3_letters = &#39;tan&#39;            male : female =      1.0 : 1.0
          first_3_letters = &#39;jor&#39;            male : female =      1.0 : 1.0
           last_3_letters = &#39;nor&#39;          female : male   =      1.0 : 1.0
           last_3_letters = &#39;ily&#39;          female : male   =      1.0 : 1.0
           last_3_letters = &#39;ren&#39;            male : female =      1.0 : 1.0
          first_3_letters = &#39;eve&#39;          female : male   =      1.0 : 1.0
-         first_3_letters = &#39;ora&#39;          female : male   =      1.0 : 1.0
-         first_3_letters = &#39;lon&#39;          female : male   =      1.0 : 1.0
          first_3_letters = &#39;emi&#39;          female : male   =      1.0 : 1.0
+         first_3_letters = &#39;lon&#39;          female : male   =      1.0 : 1.0
+         first_3_letters = &#39;ora&#39;          female : male   =      1.0 : 1.0
          first_3_letters = &#39;she&#39;            male : female =      1.0 : 1.0
+         first_2_letters = &#39;ch&#39;             male : female =      1.0 : 1.0
          first_2_letters = &#39;wr&#39;             male : female =      1.0 : 1.0
          first_2_letters = &#39;ry&#39;             male : female =      1.0 : 1.0
-         first_2_letters = &#39;ch&#39;             male : female =      1.0 : 1.0
          first_2_letters = &#39;yv&#39;             male : female =      1.0 : 1.0
           last_2_letters = &#39;cy&#39;           female : male   =      1.0 : 1.0
           last_2_letters = &#39;rb&#39;           female : male   =      1.0 : 1.0
@@ -14653,6 +14663,11 @@ Most Informative Features
              last_letter = &#39;k&#39;              male : female =     45.1 : 1.0
           last_2_letters = &#39;us&#39;             male : female =     39.6 : 1.0
           last_2_letters = &#39;ia&#39;           female : male   =     38.2 : 1.0
+             last_letter = &#39;a&#39;            female : male   =     34.4 : 1.0
+          last_2_letters = &#39;sa&#39;           female : male   =     34.2 : 1.0
+          last_2_letters = &#39;rd&#39;             male : female =     30.2 : 1.0
+             last_letter = &#39;f&#39;              male : female =     26.6 : 1.0
+          last_2_letters = &#39;ra&#39;           female : male   =     24.6 : 1.0
 </pre>
 </div>
 </div>
@@ -14748,6 +14763,11 @@ Most Informative Features
              last_letter = &#39;k&#39;              male : female =     45.1 : 1.0
           last_2_letters = &#39;us&#39;             male : female =     39.6 : 1.0
           last_2_letters = &#39;ia&#39;           female : male   =     38.2 : 1.0
+             last_letter = &#39;a&#39;            female : male   =     34.4 : 1.0
+          last_2_letters = &#39;sa&#39;           female : male   =     34.2 : 1.0
+          last_2_letters = &#39;rd&#39;             male : female =     30.2 : 1.0
+          last_3_letters = &#39;ard&#39;            male : female =     27.7 : 1.0
+             last_letter = &#39;f&#39;              male : female =     26.6 : 1.0
 </pre>
 </div>
 </div>
@@ -14947,6 +14967,11 @@ Most Informative Features
    6.600 first_3_letters==&#39;ira&#39; and label is &#39;male&#39;
   -6.467 first_3_letters==&#39;ros&#39; and label is &#39;male&#39;
    6.266 last_3_letters==&#39;coe&#39; and label is &#39;male&#39;
+  -5.789 last_2_letters==&#39;na&#39; and label is &#39;male&#39;
+   5.730 last_3_letters==&#39;tya&#39; and label is &#39;male&#39;
+   5.639 last_3_letters==&#39;ous&#39; and label is &#39;female&#39;
+   5.537 last_3_letters==&#39;rko&#39; and label is &#39;male&#39;
+  -5.481 last_letter==&#39;k&#39; and label is &#39;female&#39;
 </pre>
 </div>
 </div>
@@ -15139,6 +15164,11 @@ Most Informative Features
    4.860 last_2_letters==&#39;bs&#39; and label is &#39;female&#39;
    4.810 first_2_letters==&#39;ll&#39; and label is &#39;male&#39;
   -4.793 last_2_letters==&#39;ko&#39; and label is &#39;male&#39;
+   4.724 last_2_letters==&#39;oz&#39; and label is &#39;female&#39;
+   4.571 last_2_letters==&#39;ru&#39; and label is &#39;female&#39;
+   4.515 last_2_letters==&#39;ok&#39; and label is &#39;female&#39;
+  -4.503 last_letter==&#39;f&#39; and label is &#39;female&#39;
+   4.252 first_2_letters==&#39;dw&#39; and label is &#39;male&#39;
 </pre>
 </div>
 </div>
@@ -15243,6 +15273,46 @@ Most Informative Features
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">classifier</span><span class="o">.</span><span class="n">show_most_informative_features</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>   5.984 last_2_letters==&#39;ua&#39; and label is &#39;male&#39;
+  -5.723 last_letter==&#39;k&#39; and label is &#39;female&#39;
+   4.860 last_2_letters==&#39;bs&#39; and label is &#39;female&#39;
+   4.810 first_2_letters==&#39;ll&#39; and label is &#39;male&#39;
+  -4.793 last_2_letters==&#39;ko&#39; and label is &#39;male&#39;
+   4.724 last_2_letters==&#39;oz&#39; and label is &#39;female&#39;
+   4.571 last_2_letters==&#39;ru&#39; and label is &#39;female&#39;
+   4.515 last_2_letters==&#39;ok&#39; and label is &#39;female&#39;
+  -4.503 last_letter==&#39;f&#39; and label is &#39;female&#39;
+   4.252 first_2_letters==&#39;dw&#39; and label is &#39;male&#39;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>
